@@ -1,0 +1,161 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f0f0f0;
+  color: #000;
+  padding-bottom: 50px;
+}
+
+header {
+  background: #cc0000;  /* Цвет хедера изменён на красный */
+  padding: 20px;
+  color: white;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-inner img {
+  width: 300px;
+  height: 80px;
+}
+
+.header-inner h1 {
+  font-size: 32px;
+  color: #000;
+  flex: 1;
+  text-align: center;
+}
+
+.nav-background {
+  background: linear-gradient(to right, #000000, #000000);
+  padding: 10px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown button {
+  background: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #cc0000;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  min-width: 180px;
+  z-index: 10;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 18px;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.2s ease;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.content-block {
+  background: #e0e0e0;
+  margin-bottom: 24px;
+  padding: 24px;
+  display: flex;
+  gap: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.content-block img {
+  width: 300px; /* Изменён размер картинок на 300px */
+  height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.content-block p {
+  font-size: 22px;  /* Увеличен размер шрифта */
+  color: #333;
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  margin: 4px 6px 4px 0;
+  background-color: #cc0000;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tag:hover,
+.tag.active {
+  background-color: #660000;
+}
+
+.header-inner h1:hover {
+  color: #ff5555;
+  transition: color 0.3s ease;
+}
+
+.dropdown button:hover {
+  background: #ffe6e6;
+}
+
+.dropdown-content a:hover {
+  background-color: #f9f9f9;
+}
